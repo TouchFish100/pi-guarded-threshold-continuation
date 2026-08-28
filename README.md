@@ -1,10 +1,9 @@
-# Pi Guarded Threshold Continuation
+# Pi Threshold Continue
 
 An intentionally small [Pi](https://pi.dev) extension for long-running tasks.
 After an automatic threshold compaction, it queues one hidden follow-up only
-when Pi is still processing an active agent run. The follow-up asks the model to
-reassess the compacted task: finish if it is done, otherwise take the next
-necessary action.
+when Pi is still processing an active agent run. The follow-up tells the model
+to continue the current task, or finish when the task is already complete.
 
 ## Why
 
@@ -30,7 +29,7 @@ and does not write project files.
 ## Install
 
 ```bash
-pi install npm:@touchfish100/pi-guarded-threshold-continuation
+pi install npm:@touchfish100/pi-threshold-continue
 ```
 
 Restart Pi after installing or updating the package.

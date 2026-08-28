@@ -1,7 +1,7 @@
 {
-  "name": "@touchfish100/pi-guarded-threshold-continuation",
+  "name": "@touchfish100/pi-threshold-continue",
   "version": "0.1.0",
-  "description": "Resume active Pi tasks after threshold compaction with a guarded, decision-oriented continuation.",
+  "description": "Continue active Pi tasks after threshold compaction.",
   "license": "MIT",
   "type": "module",
   "keywords": [
