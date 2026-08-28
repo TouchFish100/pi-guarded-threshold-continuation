@@ -3,8 +3,7 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 const queuedCompactions = new Set<string>();
 const MAX_TRACKED_COMPACTIONS = 128;
 
-const continuationPrompt =
-  "Automatic threshold compaction has completed. Reassess the active task from the compaction summary, retained recent messages, and original user goal. If the task is complete, provide the final answer and stop. Otherwise take only the next necessary concrete action. Do not repeat completed work or invent work merely to continue.";
+const continuationPrompt = "Continue the current task; if it is complete, finish.";
 
 export default function guardedThresholdContinuation(pi: ExtensionAPI): void {
   pi.on("session_compact", async (event, ctx) => {
