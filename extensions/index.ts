@@ -5,7 +5,7 @@ const MAX_TRACKED_COMPACTIONS = 128;
 
 const continuationPrompt = "Continue the current task; if it is complete, finish.";
 
-export default function guardedThresholdContinuation(pi: ExtensionAPI): void {
+export default function thresholdContinue(pi: ExtensionAPI): void {
   pi.on("session_compact", async (event, ctx) => {
     // Never interfere with manual compaction or Pi's native overflow retry path.
     if (event.reason !== "threshold" || event.willRetry) return;
@@ -25,7 +25,7 @@ export default function guardedThresholdContinuation(pi: ExtensionAPI): void {
 
     await pi.sendMessage(
       {
-        customType: "guarded-threshold-continuation",
+        customType: "threshold-continue",
         display: false,
         content: continuationPrompt,
       },
