@@ -1,6 +1,6 @@
 {
   "name": "@touchfish100/pi-threshold-continue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Continue active Pi tasks after threshold compaction.",
   "license": "MIT",
   "type": "module",
